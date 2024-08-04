@@ -68,6 +68,14 @@ const plugins = [
       authWebhookId: process.env.PAYPAL_AUTH_WEBHOOK_ID,
     },
   },
+  {
+    resolve: `medusa-file-s3`,
+    options: {
+      s3_url: process.env.S3_URL,
+      bucket: process.env.S3_BUCKET,
+      region: process.env.S3_REGION,
+    },
+  },
 ];
 
 const modules = {
